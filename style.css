@@ -10,8 +10,26 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 /* End of Default styles */
+
+/* Custom ScrollBar */
+
+body::-webkit-scrollbar{
+  width: 1.2rem;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color:#32b0ce;
+  border-radius: 5rem;
+}
+
+body::-webkit-scrollbar-track{
+  background-color:#212121;
+  border-radius: 5rem;
+}
+/* End of Custom ScrollBar */
 
 /* Container */
 .container {
@@ -728,6 +746,178 @@ transform: translateY(-1rem);
     bottom: 5rem;
     transform: translateX(-50%);
 }
+
+/* Footer */
+footer{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15rem 0 3rem 0;
+}
+
+.footer-header{
+  text-align: center;
+  margin-bottom: 15rem;
+}
+
+.footer-header .section-border::after{
+left: 50%;
+transform: translateX(-50%);
+}
+
+.footer-content{
+  width: 60%;
+  display: flex;
+  margin-bottom: 10rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-social{
+  width: 30%;
+}
+
+.address{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  /* space between ADDRESS and E-Book Library text */
+}
+
+.address i{
+  font-size: 3.5rem;
+  color:#fff;
+  margin-right:2.3rem;
+}
+
+.address span{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #fff;
+}
+
+.address-par {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  padding-left:6rem;
+  text-align: left;
+  /* Moves the main srt address */
+}
+
+.address-par span{
+  width: 10rem;
+  font-size: 1.4rem;
+  color:#fff;
+  margin-bottom:0.5rem;
+}
+
+.social-media i{
+  font-size: 3rem;
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.social-media {
+    margin-left: -6rem;
+    /* align the f icon with the mail icon */
+}
+
+.footer-form{
+  width: 100%;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem 2rem;
+}
+
+.input-group input {
+    width: calc(50% - 1rem);
+    height: 6rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    background-color: #1a1a1a;
+    border: none;
+    padding: 1rem;
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.footer-form textarea {
+    width: 100%;
+    height: 15rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 0;
+    border-radius: 0.5rem;
+    color: #ccc;
+    background-color: #1a1a1a;
+    padding: 1rem;
+}
+
+.footer-form button{
+  width: 20rem;
+  height:5rem;
+  background-color:#32b0ce;
+  border:none;
+  margin-left: auto;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing:0.1rem;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3)
+}
+
+.footer-form button:active{
+  transform:translateY(0.2rem);
+}
+
+.footer-bottom{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p{
+font-size:1.4rem;
+color: #ccc;
+}
+
+.footer-bottom button{
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  background:none;
+}
+
+.footer-bottom button a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size:1.4rem;
+  color:#ccc;
+  text-transform:uppercase;
+  letter-spacing: 0.1rem;
+}
+/* End of footer */
 
 /* End of Testimonials Section */
 /* End of Conatiner */
