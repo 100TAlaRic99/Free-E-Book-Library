@@ -1,0 +1,458 @@
+/* ========================= 
+   ABOUT HEADER 
+========================= */ 
+ 
+.about-header { 
+  width: 100%; 
+  height: 50vh !important; 
+ 
+  position: relative; 
+ 
+  background: linear-gradient( 
+      rgba(33, 33, 33, 0.9), 
+      rgba(33, 33, 33, 0.7) 
+    ), 
+    url(images/about-bg.jpg) center center no-repeat; 
+ 
+  background-size: cover; 
+ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+} 
+ 
+/* Logo */ 
+.about-header .logo { 
+  position: absolute; 
+  top: 4rem; 
+  left: 16vw; /* Controls logo horizontal position - increase to move right, decrease to move left */ 
+} 
+ 
+/* About Us */ 
+.about-header .section-heading-sm { 
+  margin: 0 0 2rem 0; 
+  text-align: center; 
+} 
+ 
+/* Explore Our Values */ 
+
+ 
+ 
+/* ========================= 
+   ABOUT SECTION 
+========================= */ 
+ 
+.about-section { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding: 15rem 0; 
+  overflow: hidden; 
+} 
+ 
+ 
+/* ========================= 
+   ABOUT SECTION HEADER 
+========================= */ 
+ 
+.about-section-header { 
+  width:60%; 
+  margin-left: auto;
+  margin-right: 5vw;
+  text-align: right; 
+  padding-bottom: 10rem; 
+  /* Removed transform to make heading visible - was pushing it off-screen */
+} 
+
+.about-section-header .section-border {
+  width: 60%;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+}
+ 
+.about-section-header .section-border::after { 
+  left: auto; 
+  right: 0; 
+  transform: none; 
+  
+} 
+ 
+ 
+/* ========================= 
+   FEATURES
+========================= */ 
+ 
+.about-page-features { 
+  /*
+    FIX:
+    Grid gives every card a fixed column.
+    This prevents flex-wrap from moving
+    cards into unexpected positions.
+    Using vw units for responsive card width across screen sizes.
+  */
+  display: grid;
+
+  /* Controls card width - increase to make cards wider, decrease to make narrower */
+  grid-template-columns: repeat(3, 25vw);
+
+  justify-content: center;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto; 
+} 
+ 
+.feature { 
+  /* Controls card width - responsive to screen size */
+  width: 25vw; 
+  /* Controls card height - responsive to screen size */
+  height: 25vw; 
+  /* Prevents cards from getting too large on big screens */
+  max-width: 20rem; 
+  /* Prevents cards from getting too large on big screens */
+  max-height: 20rem; 
+
+  background-color: #181818; 
+
+  /* Controls spacing between cards - increase for more space */
+  margin: 3rem; 
+
+  border-radius: 3rem; 
+
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+
+  display: flex; 
+  flex-direction: column; 
+
+  align-items: center; 
+  justify-content: space-evenly; 
+
+  cursor: pointer; 
+
+  position: relative; 
+  overflow: hidden; 
+} 
+ 
+ 
+/* ========================= 
+   STAGGERED CARDS
+========================= */ 
+ 
+/* Column 2 cards (2nd, 5th, 8th) - offset down */
+.feature:nth-child(2), 
+.feature:nth-child(5), 
+.feature:nth-child(8) { 
+  /* Controls vertical offset for 2nd column - 6rem = 30% of 20rem card height */
+  transform: translateY(6rem); 
+}
+
+/* Column 3 cards (3rd, 6th) - offset down more */
+.feature:nth-child(3), 
+.feature:nth-child(6) { 
+  /* Controls vertical offset for 3rd column - 12rem = 60% of 20rem card height */
+  transform: translateY(12rem); 
+} 
+ 
+ 
+/* Circle Behind Icon */ 
+ 
+.feature::before { 
+  content: ""; 
+
+  /* Controls circle size - increase to make larger, decrease to make smaller */
+  width: 15rem; 
+  height: 15rem; 
+
+  background-color: #1f1f1f; 
+
+  border-radius: 50%; 
+
+  position: absolute; 
+
+  top: -40%; 
+  left: 50%; 
+
+  transform: translateX(-50%); 
+
+  opacity: 0.7; 
+} 
+ 
+ 
+/* Feature Icon */ 
+ 
+.feature span { 
+  z-index: 1; 
+
+  /* Controls icon size - increase to make larger, decrease to make smaller */
+  font-size: 6rem; 
+
+  color: #32b0ce; 
+} 
+ 
+ 
+/* Feature Heading */ 
+ 
+.feature h3 { 
+  font-size: 1.8rem; 
+  font-weight: 300; 
+
+  color: #fff; 
+
+  width: 70%; 
+
+  text-align: center; 
+} 
+ 
+ 
+/* ========================= 
+   TEAM
+========================= */ 
+ 
+.team { 
+  width: 200%; 
+  height: 200rem; 
+
+  background: linear-gradient( 
+      to bottom, 
+      rgba(33, 33, 33, 0.7), 
+      rgba(19, 27, 29, 0.9), 
+      rgba(33, 33, 33, 0.9) 
+    ), 
+    url(images/team-bg.jpg) center no-repeat; 
+
+  background-size: cover; 
+
+  /* ORIGINAL TRIANGLE - UNCHANGED */
+  clip-path: polygon(100% 50%, 0 0, 0 100%); 
+
+  display: flex; 
+  flex-direction: column; 
+
+  justify-content: center; 
+  align-items: center; 
+
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9); 
+} 
+ 
+ 
+/* Team Heading */ 
+ 
+.team h1 { 
+  font-family: "Kaushan Script", cursive; 
+
+  font-size: 10rem; 
+
+  color: #32b0ce; 
+
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); 
+
+  margin: -15rem 0 15rem 0; 
+} 
+ 
+ 
+/* Team Members */ 
+ 
+.members { 
+  display: flex; 
+} 
+ 
+.member { 
+  display: flex; 
+  flex-direction: column; 
+
+  align-items: center; 
+
+  margin: 0 6rem; 
+} 
+ 
+.member img { 
+  width: 27rem; 
+  height: 27rem; 
+
+  object-fit: cover; 
+
+  border-radius: 50%; 
+
+  filter: grayscale(100%); 
+
+  cursor: pointer; 
+
+  transition: filter 1s; 
+} 
+ 
+.member img:hover { 
+  filter: grayscale(0); 
+} 
+ 
+ 
+/* Member Name */ 
+ 
+.member-name { 
+  font-size: 1.8rem; 
+
+  text-transform: uppercase; 
+
+  color: #fff; 
+
+  letter-spacing: 0.1rem; 
+
+  margin-top: 2rem; 
+} 
+ 
+ 
+/* Member Position */ 
+ 
+.member-position { 
+  font-size: 1rem; 
+
+  text-transform: uppercase; 
+
+  color: #32b0ce; 
+
+  letter-spacing: 0.1rem; 
+} 
+ 
+ 
+/* ========================= 
+   FOOTER
+========================= */ 
+ 
+.footer-about { 
+  /* Controls footer margin - increase to move down more, decrease to move up more */
+  margin-top: -50rem; 
+} 
+
+ 
+.footer-about .footer-header { 
+   width: 60%;
+  margin-left: auto;
+  margin-right: 5vw;
+  text-align: right; 
+  /* Removed transform to make heading visible - was pushing it off-screen */
+} 
+
+.footer-about .footer-header .section-border { 
+  width: 60%; 
+  position: relative; 
+  margin-left: auto; 
+  margin-right: 0; 
+}
+ 
+.footer-about .footer-header .section-border::after { 
+  left: auto; 
+  right: 0; 
+  transform: none; 
+} 
+
+
+/* =========================================================
+   FOOTER ADDRESS ALIGNMENT
+   ONLY ADDRESS + SOCIAL ICONS
+========================================================= */
+
+
+/*
+   Address container
+
+   The icon and ADDRESS heading
+   will sit on the same row.
+*/
+
+.footer-about .address {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  text-align: left;
+  margin-bottom: 2rem; /* Controls space below address section */
+}
+
+
+/*
+   Envelope icon
+*/
+
+.footer-about .address > i {
+  flex: 0 0 auto;
+
+  margin-right: 1.5rem;
+  font-size: 3.5rem; /* Controls envelope icon size */
+}
+
+
+/*
+   ADDRESS heading
+
+   Keeps ADDRESS beside the envelope.
+*/
+
+.footer-about .address > h3 {
+  margin: 0;
+
+  flex: 1;
+}
+
+
+/*
+   Address text
+
+   Starts underneath the ADDRESS heading,
+   not underneath the envelope icon.
+*/
+
+.footer-about .address .address-par {
+  width: 100%;
+
+  margin: 2rem 0 0 0;
+
+  padding-left: 6rem; /* Controls indentation of address text - matches social icon alignment */
+
+  text-align: left;
+
+  box-sizing: border-box;
+}
+
+
+/*
+   Social media icons
+
+   Keep them together and centered
+   under the address section.
+*/
+
+.footer-about .social-media {
+  display: flex;
+
+  justify-content: flex-start; /* Aligns icons to start (left) */
+  align-items: center;
+
+  gap: 2rem; /* Controls spacing between social icons - increase for more space */
+
+  width: 100%;
+  padding-left: 6rem; /* Aligns social icons with address text - matches address-par padding */
+}
+
+
+/*
+   Remove unwanted individual margins.
+*/
+
+.footer-about .social-media i {
+  margin: 0;
+  font-size: 3rem; /* Controls social icon size */
+}
+
+
+/* ========================= 
+   RESPONSIVE - Using VW units instead of media queries
+   This makes the layout responsive across all screen sizes
+   without hardcoded breakpoints. Adjust vw values to control
+   how elements scale on different screens.
+========================= */
