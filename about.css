@@ -456,3 +456,371 @@
    without hardcoded breakpoints. Adjust vw values to control
    how elements scale on different screens.
 ========================= */
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ABOUT PAGE ONLY
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP - 1024px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  /* -------------------------
+     ABOUT HEADER
+     ------------------------- */
+
+  .about-header .logo {
+    left: 10vw;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION HEADER
+     ------------------------- */
+
+  .about-section-header {
+    width: 70%;
+    margin-right: 5vw;
+  }
+
+  .about-section-header .section-border {
+    width: 70%;
+  }
+
+
+  /* -------------------------
+     FEATURES
+     ------------------------- */
+
+  .about-page-features {
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature {
+    width: 20rem;
+    height: 20rem;
+    justify-self: center;
+  }
+
+
+  /* -------------------------
+     TEAM
+     Keep original triangle
+     ------------------------- */
+
+  .team h1 {
+    font-size: 8rem;
+  }
+
+  .member {
+    margin: 0 3rem;
+  }
+
+  .member img {
+    width: 23rem;
+    height: 23rem;
+  }
+
+
+  /* -------------------------
+     ABOUT FOOTER
+     ------------------------- */
+
+  .footer-about .footer-header {
+    width: 70%;
+  }
+
+  .footer-about .footer-header .section-border {
+    width: 70%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET - 768px AND BELOW
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------
+     ABOUT HEADER
+     ------------------------- */
+
+  .about-header {
+    height: 45vh !important;
+  }
+
+  .about-header .logo {
+    left: 7vw;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION HEADER
+     ------------------------- */
+
+  .about-section {
+    padding: 10rem 0;
+  }
+
+  .about-section-header {
+    width: 85%;
+    margin-right: 0;
+    padding-bottom: 7rem;
+  }
+
+  .about-section-header .section-border {
+    width: 70%;
+  }
+
+
+  /* -------------------------
+     FEATURES
+     ------------------------- */
+
+  .about-page-features {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature {
+    width: 20rem;
+    height: 20rem;
+  }
+
+
+  /*
+     Keep the original staggered design
+     but remove the third-column offset.
+  */
+
+  .feature:nth-child(3),
+  .feature:nth-child(6) {
+    transform: none;
+  }
+
+  .feature:nth-child(2),
+  .feature:nth-child(5),
+  .feature:nth-child(8) {
+    transform: translateY(4rem);
+  }
+
+
+  /* -------------------------
+     TEAM
+     ------------------------- */
+
+  .team h1 {
+    font-size: 7rem;
+  }
+
+  .members {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .member {
+    margin: 0 2rem;
+  }
+
+  .member img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+
+  /* -------------------------
+     ABOUT FOOTER HEADER
+     ------------------------- */
+
+  .footer-about .footer-header {
+    width: 85%;
+    margin-right: 0;
+  }
+
+  .footer-about .footer-header .section-border {
+    width: 70%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE - 480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* -------------------------
+     ABOUT HEADER
+     ------------------------- */
+
+  .about-header {
+    height: 40vh !important;
+  }
+
+  .about-header .logo {
+    left: 5vw;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION HEADER
+     ------------------------- */
+
+  .about-section {
+    padding: 8rem 0;
+  }
+
+  .about-section-header {
+    width: 90%;
+    text-align: center;
+    margin-right: 0;
+    padding-bottom: 5rem;
+  }
+
+  .about-section-header .section-border {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-section-header .section-border::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+
+  /* -------------------------
+     FEATURES
+     ------------------------- */
+
+  .about-page-features {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .feature {
+    width: min(20rem, 75vw);
+    height: min(20rem, 75vw);
+    margin: 2rem auto;
+  }
+
+
+  /*
+     One-column layout:
+     remove the desktop/tablet stagger.
+  */
+
+  .feature:nth-child(2),
+  .feature:nth-child(3),
+  .feature:nth-child(5),
+  .feature:nth-child(6),
+  .feature:nth-child(8) {
+    transform: none;
+  }
+
+
+  /* -------------------------
+     FEATURE CIRCLE
+     ------------------------- */
+
+  .feature::before {
+    width: 13rem;
+    height: 13rem;
+  }
+
+
+  /* -------------------------
+     TEAM
+     Preserve original triangle
+     ------------------------- */
+
+  .team {
+    /*
+       Do not change width or clip-path.
+       These are responsible for your
+       existing triangle design.
+    */
+  }
+
+  .team h1 {
+    font-size: 5rem;
+    margin: -10rem 0 10rem 0;
+  }
+
+  .members {
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .member {
+    margin: 0;
+  }
+
+  .member img {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .member-name {
+    font-size: 1.6rem;
+  }
+
+  .member-position {
+    font-size: 1rem;
+  }
+
+
+  /* -------------------------
+     ABOUT FOOTER HEADER
+     ------------------------- */
+
+  .footer-about .footer-header {
+    width: 90%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .footer-about .footer-header .section-border {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-about .footer-header .section-border::after {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+
+  /* -------------------------
+     ABOUT FOOTER ADDRESS
+     ------------------------- */
+
+  .footer-about .address {
+    width: 100%;
+  }
+
+  .footer-about .address .address-par {
+    margin-left: 5.5rem;
+    max-width: calc(100% - 5.5rem);
+  }
+
+  .footer-about .social-media {
+    padding-left: 5.5rem;
+    gap: 1.5rem;
+  }
+
+}

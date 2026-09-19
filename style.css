@@ -1000,3 +1000,536 @@ color: #ccc;
 
 /* End of Testimonials Section */
 /* End of Conatiner */
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   GLOBAL ELEMENTS ONLY
+   ========================================================= */
+
+
+/* =========================================================
+   LAPTOP - 1280px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1280px) {
+
+  /* -------------------------
+     MENU ICON
+     ------------------------- */
+
+  .menu-icons {
+    right: 8vw;
+  }
+
+
+  /* -------------------------
+     LOGO
+     ------------------------- */
+
+  .logo {
+    left: 10vw;
+  }
+
+
+  /* -------------------------
+     BANNER
+     ------------------------- */
+
+  .banner {
+    right: 8vw;
+    bottom: 15rem;
+  }
+
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
+
+  .footer-content {
+    width: 70%;
+  }
+
+  .footer-bottom {
+    width: 70%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP - 1024px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  /* -------------------------
+     MENU ICON
+     ------------------------- */
+
+  .menu-icons {
+    right: 6vw;
+  }
+
+
+  /* -------------------------
+     LOGO
+     ------------------------- */
+
+  .logo {
+    left: 8vw;
+  }
+
+
+  /* -------------------------
+     BANNER
+     ------------------------- */
+
+  .banner {
+    right: 6vw;
+    bottom: 12rem;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION
+     ------------------------- */
+
+  .about-content-left {
+    width: 45%;
+  }
+
+  .about-content-right {
+    width: 55%;
+  }
+
+  .about p {
+    width: min(50rem, 90%);
+  }
+
+  .section-border {
+    width: min(50rem, 90%);
+  }
+
+
+  /* -------------------------
+     BOOKS
+     ------------------------- */
+
+  .books-list {
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
+
+  .footer-content {
+    width: 80%;
+  }
+
+  .footer-bottom {
+    width: 80%;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET - 768px AND BELOW
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* -------------------------
+     NAVIGATION
+     ------------------------- */
+
+  .nav-left {
+    display: none;
+  }
+
+  .navigate .nav-right {
+    width: 100%;
+  }
+
+
+  /* -------------------------
+     MENU ICON
+     ------------------------- */
+
+  .menu-icons {
+    right: 6vw;
+  }
+
+
+  /* -------------------------
+     LOGO
+     ------------------------- */
+
+  .logo {
+    left: 6vw;
+  }
+
+
+  /* -------------------------
+     HEADER / BANNER
+     ------------------------- */
+
+  .banner {
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+  }
+
+
+  .banner h3 {
+    font-size: 5rem;
+  }
+
+  .banner h1 {
+    font-size: 10rem;
+  }
+
+  .banner h1 span {
+    font-size: 16rem;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION
+     ------------------------- */
+
+  .about-content {
+    align-items: center;
+  }
+
+  .about-content-left {
+    width: 40%;
+    padding-right: 3rem;
+  }
+
+  .about-content-right {
+    width: 60%;
+    padding-left: 3rem;
+  }
+
+  .section-num span {
+    font-size: 18rem;
+  }
+
+  .about p {
+    width: 100%;
+    max-width: 45rem;
+  }
+
+  .section-border {
+    width: 100%;
+    max-width: 45rem;
+  }
+
+
+  /* -------------------------
+     BOOKS
+     ------------------------- */
+
+  .books-list {
+    width: 90%;
+  }
+
+  .book {
+    margin: 3rem;
+  }
+
+
+  /* -------------------------
+     TESTIMONIALS
+     ------------------------- */
+
+  .feedback {
+    width: 90%;
+  }
+
+  .feedback-top {
+    padding-left: 0;
+  }
+
+  .feedback-top img {
+    width: 26rem;
+    height: 26rem;
+    margin-right: 3rem;
+  }
+
+  .feedback-heading h1 {
+    font-size: 4rem;
+  }
+
+  .feedback-heading h1 span {
+    font-size: 5.5rem;
+  }
+
+  .quote {
+    width: min(65rem, 90vw);
+  }
+
+  .quote-header h1 {
+    padding: 0 5rem;
+  }
+
+  .quote-body p {
+    width: min(50rem, 80%);
+  }
+
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
+
+  .footer-content {
+    width: 90%;
+  }
+
+  .footer-bottom {
+    width: 90%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE - 480px AND BELOW
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  /* -------------------------
+     MENU ICON
+     ------------------------- */
+
+  .menu-icons {
+    right: 5vw;
+  }
+
+
+  /* -------------------------
+     LOGO
+     ------------------------- */
+
+  .logo {
+    left: 5vw;
+  }
+
+
+  /* -------------------------
+     BANNER
+     ------------------------- */
+
+  .banner h3 {
+    font-size: 4rem;
+  }
+
+  .banner h1 {
+    font-size: 8rem;
+  }
+
+  .banner h1 span {
+    font-size: 12rem;
+  }
+
+  .banner h4 {
+    font-size: 1.4rem;
+    margin-left: 3rem;
+  }
+
+
+  /* -------------------------
+     ABOUT SECTION
+     ------------------------- */
+
+  .about {
+    padding: 12rem 0 20rem 0;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-content-left,
+  .about-content-right {
+    width: 90%;
+  }
+
+  .about-content-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .about-content-right {
+    padding: 5rem 0 0;
+  }
+
+  .section-num span {
+    font-size: 14rem;
+  }
+
+  .about p {
+    width: 100%;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .section-border {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+
+  /* -------------------------
+     BOOKS
+     ------------------------- */
+
+  .books-list {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .book {
+    width: 28rem;
+    margin: 3rem auto;
+  }
+
+  .book img {
+    width: 26rem;
+  }
+
+
+  /* -------------------------
+     TESTIMONIALS
+     ------------------------- */
+
+  .testimonials-top {
+    flex-direction: column;
+  }
+
+  .testimonials-top .section-num {
+    margin-right: 0;
+  }
+
+  .feedback {
+    width: 100%;
+  }
+
+  .feedback-top {
+    flex-direction: column-reverse;
+    padding-left: 0;
+  }
+
+  .feedback-top img {
+    width: 24rem;
+    height: 24rem;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+
+  .feedback-heading {
+    width: 90%;
+    justify-content: center;
+  }
+
+  .feedback-heading h1 {
+    font-size: 3.5rem;
+  }
+
+  .feedback-heading h1 span {
+    font-size: 5rem;
+  }
+
+  .quote-bg {
+    width: 28rem;
+    height: 28rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .quote {
+    width: 90vw;
+    height: auto;
+    min-height: 32rem;
+    left: 50%;
+    padding: 3rem 1rem;
+  }
+
+  .quote-header {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .quote-header i {
+    font-size: 5rem;
+  }
+
+  .quote-header h1 {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  .quote-body p {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+
+  /* -------------------------
+     FOOTER
+     ------------------------- */
+
+  .footer-content {
+    width: 90%;
+    flex-direction: column-reverse;
+    gap: 5rem;
+  }
+
+  .footer-social,
+  .footer-form {
+    width: 100%;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+
+  .footer-form textarea {
+    width: 100%;
+  }
+
+  .footer-form button {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .footer-bottom {
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+}
