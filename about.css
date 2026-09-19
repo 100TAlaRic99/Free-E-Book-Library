@@ -408,11 +408,11 @@
 */
 
 .footer-about .address .address-par {
-  width: 100%;
+  width: auto;
 
-  margin: 2rem 0 0 0;
+  margin: 2rem 0 0 5.5rem;
 
-  padding-left: 6rem; /* Controls indentation of address text - matches social icon alignment */
+  padding: 0; /* Controls indentation of address text - matches social icon alignment */
 
   text-align: left;
 
