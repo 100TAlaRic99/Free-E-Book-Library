@@ -409,6 +409,9 @@
 /* =========================================================
    MOBILE
    480px AND BELOW
+
+   Only mobile-specific adjustments are made here.
+   Desktop and tablet layouts remain unchanged.
 ========================================================= */
 
 @media (max-width: 480px) {
@@ -454,6 +457,116 @@
 
 
     /* -------------------------
+       SLIDER WRAPPER
+       ------------------------- */
+
+    .testimonials-wrapper {
+        width: 94%;
+        min-height: 32rem;
+        top: 60%;
+    }
+
+
+    /* -------------------------
+       TESTIMONIAL CARD
+       
+       On mobile the image and text
+       are stacked vertically instead
+       of staying side-by-side.
+
+       This prevents the text from
+       going outside the card.
+       ------------------------- */
+
+    .slide-content {
+        width: 94%;
+        min-height: 28rem;
+        padding: 1.5rem;
+        gap: 1.2rem;
+
+        /* Stack image and text */
+        flex-direction: column;
+
+        /* Keep everything centered */
+        justify-content: center;
+        align-items: center;
+
+        /* Prevent content from overflowing */
+        box-sizing: border-box;
+    }
+
+
+    /* -------------------------
+       TESTIMONIAL IMAGE
+       ------------------------- */
+
+    .slide-img {
+        width: clamp(8rem, 35vw, 10rem);
+        flex-shrink: 0;
+    }
+
+
+    /* -------------------------
+       TESTIMONIAL TEXT
+       
+       The important fix:
+       Remove the desktop 30rem width
+       and allow the text to fit inside
+       the mobile card.
+       ------------------------- */
+
+    .slide-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .slide-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .slide-text p {
+        width: 100%;
+        max-width: 19rem;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        margin-bottom: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    .slide-text .client {
+        font-size: 1.3rem;
+    }
+
+
+    /* -------------------------
+       QUOTE ICONS
+       
+       Make the quotes smaller on
+       mobile so they don't cover
+       the image or text.
+       ------------------------- */
+
+    .slide i {
+        font-size: 6rem;
+    }
+
+    .slide i:nth-child(1) {
+        top: -13%;
+        left: 8%;
+    }
+
+    .slide i:nth-child(2) {
+        bottom: -13%;
+        right: 8%;
+    }
+
+
+    /* -------------------------
        ARROWS
        ------------------------- */
 
@@ -473,7 +586,7 @@
 
 
     /* -------------------------
-       DOTS
+       SLIDER DOTS
        ------------------------- */
 
     .dots {
