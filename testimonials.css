@@ -1,0 +1,499 @@
+/* Header */
+.testimonials-header{
+    width:100%;
+    height:50vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(rgba(33,33,33,0.9),rgba(33,33,33,0.7)),
+    url(images/testimonials-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+/* End of Header */
+
+/* Testimonials */
+.testimonials-section{
+    width:100%;
+    min-height:140vh;
+    background-color:#191919;
+    position:relative;
+}
+
+.testimonials-top{
+    position:absolute;
+    width:100%;
+    top:10%;
+    left:0;
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* Testimonial Image */
+.slide-content {
+  position: relative;
+    width: clamp(18rem, 75%, 70rem);
+    min-height: clamp(18rem, 35vw, 30rem);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: clamp(2rem, 4vw, 4rem);
+    z-index: 2;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.slide i{
+    font-size:10rem;
+    color:#32b0ce;
+    position:absolute;
+}
+
+.slide i:nth-child(1){
+    top:-18%;
+    left:10%;
+}
+
+.slide i:nth-child(2){
+    bottom:-18%;
+    right:10%;
+}
+
+.slide-img {
+    width: clamp(10rem, 14vw, 14rem); 
+    flex-shrink: 0; 
+    border-radius:3rem 0 3rem 0; 
+    overflow: visible; 
+    position:relative;
+    z-index:3;
+    /* clamp(minimum, preferred, maximum) */
+    /* clamp(minimum, preferred, maximum) since clamp is used with width miinimum height,preferred vw, maximum width*/
+}
+
+.slide-img::before,
+.slide-img::after {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    border:0.2rem solid rgba(0, 0, 0, 0.4);
+    border-radius:3rem 0 3rem 0;
+    z-index:-1;
+}
+
+.slide-img::before {
+    top:-0.6rem;
+    left:-0.6rem;
+}
+
+.slide-img::after {
+    top:0.6rem;
+    left:0.6rem;
+}
+
+
+.slide-img img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    border-radius:3rem 0 3rem 0;
+    filter:grayscale(100%);
+    transition: filter 1s;
+}
+
+.slide-img:hover img{
+    filter:grayscale(0);
+}
+
+.slider{
+    position:absolute;
+    width:500%;
+    height:100%;
+    display:flex;
+    transition:all 0.8s cubic-bezier(1,0,0,1);
+    
+}
+
+.slide{
+    width:20%;
+    height:100%;
+    flex-shrink:0;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.slide-bg{
+   position: absolute;
+    width: clamp(18rem, 75%, 70rem);
+    height: clamp(18rem, 35vw, 30rem);
+    top: 50%;
+    left: 50%;
+    background-color: rgba(50, 176, 206, 0.5);
+    border-radius: 2rem;
+    opacity: 0.7;
+    transform: translate(-50%, -50%) rotateZ(-6deg);
+    z-index: 1;
+}
+
+.slide-text h3{
+    font-size:clamp(1.5rem, 2vw, 2rem);
+    font-weight:500;
+    color:#020d14;
+    margin-bottom:1rem;
+}
+
+.slide-text p{
+    font-size:1.2rem;
+    font-weight:300;
+    color:#020d14;
+    line-height:1.6rem;
+    margin-bottom:3rem;
+    width:30rem;
+}
+
+.slide-text .client{
+    font-size:1.8rem;
+    color:#072c35;
+}
+
+/* End of Testimonial Image */
+
+.testimonials-top h3{
+     font-size: clamp(1.4rem, 2vw, 2rem);
+    font-weight: 300;
+    color: #ccc;
+}
+
+.testimonials-top h1{
+   font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.testimonials-top i{
+    font-size:1.6rem;
+    color:#32b0ce;
+    margin:0;
+}
+
+.testimonials-wrapper{
+        width:70%;
+    min-height:clamp(28rem, 42vw, 42rem);
+    height:auto;
+    position:absolute;
+    top:60%;
+    /* moves the entire box blow testimonial text up or down */
+    left:50%;
+    transform:translate(-50%,-50%);
+    overflow:hidden;
+}
+
+/* Arrow Designing and dot controls*/
+
+
+.controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.controls i {
+   width: 4rem;
+    height: 4rem;
+    background-color: #7b8584;
+    border-radius: 50%;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #444;
+    position: absolute;
+    top: 61%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.controls i:nth-child(1) {
+    left: clamp(1rem, 10%, 8rem);
+}
+
+.controls i:nth-child(2) {
+    right: clamp(1rem, 10%, 8rem);
+}
+
+.dots{
+    position:absolute;
+    bottom:10%;
+    left:50%;
+    transform:translatex(-50%);
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    pointer-events:auto;
+}
+
+.dots span{
+    width:1rem;
+    height:1rem;
+    background-color:#ccc;
+    display:block;
+    border-radius:50%;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.dots span.active{
+    width:1.5rem;
+    height:1.5rem;
+    background-color:#fff;
+}
+/* End of Testimonials */
+
+
+/* =========================================================
+   RESPONSIVE DESIGN STARTS HERE
+   TESTIMONIALS PAGE
+
+   IMPORTANT:
+   The original desktop alignment, card width,
+   slider width, quote positions and layout
+   are NOT changed here.
+========================================================= */
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   1024px AND BELOW
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .testimonials-header {
+        height: 50vh;
+    }
+
+
+    /* -------------------------
+       TOP TESTIMONIAL HEADING
+       Only adjust its vertical
+       position.
+       ------------------------- */
+
+    .testimonials-top {
+        top: 9%;
+    }
+
+
+    /* -------------------------
+       ARROWS
+       Only move the arrows inward.
+       Card width is NOT changed.
+       ------------------------- */
+
+    .controls i:nth-child(1) {
+        left: clamp(1rem, 8%, 6rem);
+    }
+
+    .controls i:nth-child(2) {
+        right: clamp(1rem, 8%, 6rem);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   768px AND BELOW
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .testimonials-header {
+        height: 45vh;
+    }
+
+
+    /* -------------------------
+       TESTIMONIAL SECTION
+       ------------------------- */
+
+    .testimonials-section {
+        min-height: 140vh;
+    }
+
+
+    /* -------------------------
+       TOP HEADING
+       ------------------------- */
+
+    .testimonials-top {
+        top: 8%;
+    }
+
+    .testimonials-top h1 {
+        margin: 1.5rem 0;
+    }
+
+
+    /* -------------------------
+       ARROWS
+       Make arrows smaller.
+       Their position is adjusted
+       without changing the card.
+       ------------------------- */
+
+    .controls i {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 2.5rem;
+    }
+
+    .controls i:nth-child(1) {
+        left: 1%;
+    }
+
+    .controls i:nth-child(2) {
+        right: 1%;
+    }
+
+
+    /* -------------------------
+       DOTS
+       ------------------------- */
+
+    .dots {
+        bottom: 9%;
+        gap: 0.7rem;
+    }
+
+    .dots span {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .dots span.active {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* -------------------------
+       HEADER
+       ------------------------- */
+
+    .testimonials-header {
+        height: 40vh;
+    }
+
+
+    /* -------------------------
+       TESTIMONIAL SECTION
+       ------------------------- */
+
+    .testimonials-section {
+        min-height: 140vh;
+    }
+
+
+    /* -------------------------
+       TOP HEADING
+       ------------------------- */
+
+    .testimonials-top {
+        top: 6%;
+    }
+
+    .testimonials-top h3 {
+        font-size: 1.3rem;
+    }
+
+    .testimonials-top h1 {
+        font-size: 2.3rem;
+        margin: 1rem 0;
+    }
+
+    .testimonials-top i {
+        font-size: 1.4rem;
+    }
+
+
+    /* -------------------------
+       ARROWS
+       ------------------------- */
+
+    .controls i {
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+    }
+
+    .controls i:nth-child(1) {
+        left: 0.5rem;
+    }
+
+    .controls i:nth-child(2) {
+        right: 0.5rem;
+    }
+
+
+    /* -------------------------
+       DOTS
+       ------------------------- */
+
+    .dots {
+        bottom: 8%;
+        gap: 0.6rem;
+    }
+
+    .dots span {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .dots span.active {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+}
+
+
+/* =========================================================
+   END OF RESPONSIVE TESTIMONIALS CSS
+========================================================= */
